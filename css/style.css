@@ -1,0 +1,786 @@
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../font/Roboto.ort");
+}
+
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.grid-area{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto);
+    justify-content: center;
+
+grid-template-areas:
+header
+section
+footer
+}
+
+.encabezado {
+    grid-area: "header";
+}
+
+.contenido-index {
+    grid-area: "section";
+}
+
+.pie-de-pagina {
+    grid-area: "footer";
+}
+
+/*INDEX*/
+
+/*Mmenu*/
+
+.encabezado{
+    background-color: #bb3e03;
+    opacity: 90%;
+    width: 100%;
+    height:8vh; 
+    overflow:hidden;
+}
+
+.menu{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 90%;
+}
+
+.menu img{
+    display: block;
+    height: 100%;
+}
+
+
+.menu li{
+    display: inline-block;
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    padding-left: 30px;
+    font-size: 18px;
+    color: #f8f9fa;
+}
+
+/*Hero*/
+
+.contenido-index {
+    background-image: url("../img/fondo-locura1.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.slogan {
+    padding: 0;
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    
+}
+
+.slogan h2{
+    font-size: 45px ;
+}
+
+/*Pie de pagina*/
+
+.pie-de-pagina{
+    width: 100%;
+    height: 22vh;
+    box-shadow:#adb5bd;
+    background-color: #0b090a;
+}
+    
+.contenedor-cajas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px ;
+    width: 100%;
+    color: #f8f9fa;
+    text-align: center;
+    align-items: center;
+}
+    
+    /*Logo*/
+    
+.contenedor-cajas figure{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+    
+.caja-1 img{
+    width: 150px;
+    height: 150px;
+   
+}
+
+.caja-1 img{
+    transition: 1.2s;
+}
+    
+.caja-1 img:hover{
+    transform: scale(1.3);
+}
+    
+    /*Redes*/
+    
+.caja-2{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    gap: 25px;
+    justify-content: center;
+}
+    
+h4{
+    margin-bottom: 25px;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+    
+.contacto{
+    width: 230px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;  
+}
+        
+    .contacto img {
+        width: 30%;
+        height: 30%;     
+    }
+
+    .caja-2 img{
+        transition: 1.5s;
+    }
+    
+    .caja-2 img:hover{
+        transform: scale(1.3);
+    }
+
+    /*Copyright*/
+
+.copy {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    row-gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    /*NOSOTROS*/   
+    
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 92vh;
+    justify-content: center;
+    background-color: #adb5bd;
+    align-items: center;
+}
+
+
+.contenedor h1 {
+    display: flex;
+    font-size: 8vh;
+    justify-content: center;
+    height: 10vh;
+}
+
+.contenedor-nosotros{
+    display: flex;
+    height: 60vh;
+}
+
+.iconos {
+    text-align: center;
+    padding: 0px 80px;
+    font-size: 120%;
+}
+
+
+.iconos h3{
+    font: weight 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.iconos img{
+    height: 30%;
+    width: 30%;
+    padding-bottom: 15px;  
+    transition: 1s;
+}
+
+.iconos img:hover{
+    transform: scale(1.8);
+    opacity: 80%;
+}
+
+
+/*GALERIA PRODUCTOS*/
+
+.contenedor-galeria{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-size: 8vh;
+    padding: 10px;
+}
+
+/*Galería*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 80%;
+    height: 70vh;
+    justify-content: space-between;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria li{
+    list-style: none;
+}
+.galeria img{
+    transition: 1.5s;
+}
+
+.galeria img:hover{
+    transform: scale(1.2);
+}
+
+/*EXPERIENCIAS*/
+
+.contenedor-experiencias{
+    width: 100%;
+    height: 80vh;
+    background-color: #adb5bd;
+    text-align: center;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+/*Cards*/
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 20px;
+    justify-content: space-evenly
+}
+
+.card {
+    width: 300px;
+    height: 520px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
+    padding: 6px;
+}
+
+.card img{
+    width: 100%; 
+    display: block;
+}
+
+.card h3{
+    font: weight 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding:10px;
+}
+
+.card p{
+    text-align: justify;
+    padding: 0 20px;
+}
+
+/*CONTACTANOS*/
+
+.contactanos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    background-color: #f8f9fa;
+    align-items: center;
+}
+
+.contenedor-contactanos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+
+.contactanos h1 {
+    font-size: 8vh;
+    padding: 10px;
+    margin: 5px auto;
+}
+
+
+/*Formulario*/
+.formulario {
+    width: 400px;
+    background-color: #adb5bd;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1b263b;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
+}
+
+.formulario h3{
+    font-size: 25px;
+    text-align: center;
+    padding:30px;
+}
+
+.formulario .dato {
+    width: 95%;
+    background-color: #f8f9fa;
+    margin: 8px;
+    padding: 10px;
+    border: 1px solid #ffbe0b;
+}
+
+
+.formulario .consulta {
+    width: 95%;
+    background-color: #f8f9fa;
+    margin: 8px;
+    padding: 50px;
+    border: 1px solid #ffbe0b;
+}
+
+.formulario .boton {
+    width: 20%;
+    background-color: #415a77;
+    margin: 8px;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #1b263b;
+    color: #f8f9fa;
+}
+
+/*Mapa*/
+.mapa {
+    border: 1px solid #1b263b;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
+}
+
+
+
+/* MEDIA QUERIES*/
+@media screen and (min-width:769) and (max-width:1024px) {
+    .grid-area{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    /*Nav*/
+    .menu a {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    H1 {
+        font-size: 30px;
+    }
+
+    /*Pie de pagina*/
+    .pie-de-pagina{
+        height: auto;
+        width: 100%;
+    }
+
+    .contenedor-cajas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .caja-1 {
+        height:50px;
+        width: 50px;
+        padding-top: 10px;
+    }
+    .caja-1 img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .caja-2 {
+        height:50px;
+        width: 50px;
+    } 
+
+    .caja-2 h4 {
+        font-size: 30px;
+    }
+
+    .contacto {
+        height:120px;
+        width: 120px;
+    }
+
+    /*Index*/
+    .contenido-index h2{
+        font-size: 30px;
+    }
+
+    /*Nosotros*/
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor h1 {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .contenedor-nosotros {
+        flex-direction: column;
+    }
+
+    .iconos img {
+        height:50px;
+        width: 50px;
+    }
+
+    .iconos h3 {
+        font-size: 15px;
+    }
+
+    .iconos .parrafo {
+        font-size: 10px;
+    }
+
+    /*Galeria*/
+    .contenedor-galeria{
+        height: auto;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .galeria img{
+        height: 80px;
+        width: 80px;
+    }
+
+    /*Experiencias*/
+
+    .contenedor-experiencias {
+        height: auto;
+    }
+
+    .card-container{
+        margin: 10px;
+    }
+
+    .card {
+        margin: 5px;
+        height: auto;
+        padding-bottom: 5px;
+    }
+
+    .card p {
+        font-size: 5px;
+        overflow: hidden;
+        padding: 5px 15px;
+    }
+
+    /*contactanos*/
+
+    .contactanos h1 {
+        font-size: 30px;
+    }
+    
+    .contenedor-contactanos {
+        margin-bottom: 25px;   
+    }
+
+    .formulario {
+        width: 190px;
+        height: 200px;
+        padding-bottom: 5px;
+    }
+
+    .mapa {
+        width: 190px;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .formulario .dato {
+        width: 95%;
+        margin: 2px;
+        padding: 3px;
+    }
+
+    .formulario h3 {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    
+    .formulario .consulta {
+        width: 95%;
+        margin: 2px;
+        padding: 3px;
+    }
+    
+    .formulario .boton {
+        width: 40%;
+        margin: 2px;
+        padding: 5px;
+    }
+
+}
+
+
+@media screen and  (max-width: 480px) {
+
+/*Nav*/
+
+.menu a {
+    font-size: 9px;
+    padding: 2px;
+    justify-content: center;
+}
+
+.menu img {
+    visibility: hidden;
+}
+
+/*Pie de pagina*/
+.pie-de-pagina{
+    height: auto;
+    width: 100%;
+}
+
+.contenedor-cajas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-1 {
+    height:10px;
+    width: 100%;
+}
+.caja-1 img{
+    height: 70px;
+    width: 70px;
+}
+
+.caja-2 {
+    height:10px;
+    width: 100%;
+    padding: 0%;
+} 
+
+.caja-2 h4 {
+    font-size: 10px;
+}
+
+.contacto {
+    height:60px;
+    width: 60px;
+}
+.copya {
+    width: 100%;
+}
+
+.copy small {
+    font-size: 5px;
+}
+
+
+    /*Nosotros*/
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor h1 {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .contenedor-nosotros {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .iconos {
+        height:50px;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .iconos img {
+        height:100px;
+        width: 50px;
+    }
+
+    .iconos h3, .parrafo {
+        visibility: hidden;
+    }
+
+    /*Galeria*/
+    .contenedor-galeria h1 {
+        font-size: 15px;
+        padding-bottom: 50px;
+    }
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        width: 90%;
+        height: auto;
+    }
+
+    .galeria img{
+        height: 80px;
+        width: 80px;
+    }
+
+    /*Experiencias*/
+
+    .contenedor-experiencias h1 {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .contenedor-experiencias {
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
+
+    .card {
+        margin: 20px;
+        height:200px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /*contactanos*/
+
+    .contactanos h1 {
+        font-size: 15px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .contactanos {
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+    
+    .contenedor-contactanos {
+        margin-bottom: 5px; 
+        display: block;  
+        margin: 20px 30%;
+    }
+
+    .formulario {
+        width: 190px;
+        height: 200px;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .mapa {
+        width: 190px;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .formulario .dato {
+        width: 95%;
+        margin: 2px;
+        padding: 3px;
+    }
+
+    .formulario h3 {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    
+    .formulario .consulta {
+        width: 95%;
+        margin: 2px;
+        padding: 3px;
+    }
+    
+    .formulario .boton {
+        width: 40%;
+        margin: 2px;
+        padding: 5px;
+    }
+
+}
