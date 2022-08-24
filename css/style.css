@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: "roboto";
-    src: url("../font/Roboto.ort");
+    src: url("../font/Roboto/Roboto-Regular.ttf");
 }
 
 
@@ -115,7 +115,7 @@ footer
     animation-timing-function: linear;
 }
 
-.slogan h2{
+.slogan h1{
     font-size: 45px;
     animation-name: slogantype-animated;
     animation-duration: 5s;
@@ -192,8 +192,8 @@ footer
     justify-content: center;
 }
     
-h4{
-    margin-bottom: 25px;
+.seguinos {
+    margin-bottom: 10px;
     font-size: 2rem;
     padding-top: 20px;
 }
@@ -227,6 +227,11 @@ h4{
     row-gap: 50px;
     justify-content: center;
     align-items: center;
+    font-style: italic;
+}
+
+.copy span {
+    font-weight: bold;
 }
 
 
@@ -255,6 +260,7 @@ h4{
 .contenedor-nosotros{
     display: flex;
     height: 60vh;
+    padding-top: 25px;
 }
 
 .iconos {
@@ -264,11 +270,11 @@ h4{
 }
 
 
-.iconos h3{
-    font: weight 2rem;
+.iconos h2{
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
-    
+    padding-bottom: 25px;
 }
 
 
@@ -281,7 +287,7 @@ h4{
 
 
 .iconos p {
-    transition: 2s;
+    transition: 1s;
     opacity: 0%;
 }
 
@@ -325,9 +331,9 @@ h1 {
     list-style: none;
 }
 .galeria img{
-   transition: 1.5s;
-   opacity: 70%;
-   border-radius: 50px;
+    transition: 1.5s;
+    opacity: 70%;
+    border-radius: 50px;
 }
 
 .galeria img:hover{
@@ -360,12 +366,11 @@ h1 {
 
 .card {
     width: 300px;
-    height: 520px;
+    height: 530px;
     border-radius: 15px;
     overflow: hidden;
     background-color: #f8f9fa;
     box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
-    padding: 6px;
     transition: 1s;
 }
 
@@ -375,21 +380,19 @@ h1 {
     transform: scale(1.3);
 }
 
-
-
-.card img{
+.card img {
     width: 100%; 
     display: block;
 }
 
-.card h3{
-    font: weight 2rem;
+.card h2 {
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     padding:10px;
 }
 
-.card p{
+.card p {
     text-align: justify;
     padding: 0 20px;
 }
@@ -437,7 +440,7 @@ h1 {
 }
 
 
-.formulario h3{
+.formulario h2{
     font-size: 25px;
     text-align: center;
     padding:30px;
@@ -480,7 +483,7 @@ h1 {
 
 
 /* MEDIA QUERIES*/
-@media screen and (min-width:769) and (max-width:1024px) {
+@media screen and (min-width:769px) and (max-width:1024px) {
     .grid-area{
         width: 100%;
     }
@@ -495,21 +498,19 @@ h1 {
         padding: 5px;
     }
 
-    H1 {
+    h1 {
         font-size: 30px;
     }
 
     /*Pie de pagina*/
     .pie-de-pagina{
         height: auto;
-        width: 100%;
     }
 
     .contenedor-cajas {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     .caja-1 {
@@ -527,17 +528,13 @@ h1 {
         width: 50px;
     } 
 
-    .caja-2 h4 {
-        font-size: 30px;
-    }
-
     .contacto {
         height:120px;
         width: 120px;
     }
 
     /*Index*/
-    .contenido-index h2{
+    .contenido-index h1{
         font-size: 30px;
     }
 
@@ -561,7 +558,7 @@ h1 {
         width: 50px;
     }
 
-    .iconos h3 {
+    .iconos h2 {
         font-size: 15px;
     }
 
@@ -600,7 +597,7 @@ h1 {
     }
 
     .card p {
-        font-size: 5px;
+        font-size: 4px;
         overflow: hidden;
         padding: 5px 15px;
     }
@@ -633,7 +630,7 @@ h1 {
         padding: 3px;
     }
 
-    .formulario h3 {
+    .formulario h2 {
         font-size: 12px;
         padding: 5px;
     }
@@ -696,7 +693,7 @@ h1 {
     padding: 0%;
 } 
 
-.caja-2 h4 {
+.caja-2 span {
     font-size: 10px;
 }
 
@@ -740,7 +737,7 @@ h1 {
         width: 50px;
     }
 
-    .iconos h3, .parrafo {
+    .iconos h2, .parrafo {
         visibility: hidden;
     }
 
@@ -827,7 +824,7 @@ h1 {
         padding: 3px;
     }
 
-    .formulario h3 {
+    .formulario h2 {
         font-size: 12px;
         padding: 5px;
     }
