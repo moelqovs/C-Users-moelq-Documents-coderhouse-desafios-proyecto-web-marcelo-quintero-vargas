@@ -15,234 +15,45 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.grid-area{
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto);
-    justify-content: center;
-
-grid-template-areas:
-header
-section
-footer
-}
-
-.encabezado {
-    grid-area: "header";
-}
-
-.contenido-index {
-    grid-area: "section";
-}
-
-.pie-de-pagina {
-    grid-area: "footer";
-}
-
 /*INDEX*/
 
-/*Menu*/
-
-.menu{
-    background: rgb(76,76,76);
-    ansform.Microsoft.gradient  (startColorstr='#4c4c4c', endColorstr='#131313',  GradientType=0);
-    background: -moz-linear-gradient(top,  rgba(76, 76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102, 102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44, 1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1)  60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1)  91%, rgba(19,19,19,1) 100%);
-    background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
-    background: linear-gradient(to bottom,  rgba(76,    76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,1     02,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1)     50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba (43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,   19,19,1) 100%);
-    width: 100%;
-    height:8vh; 
-    padding: 5px 0 0 30%;
+/*nav*/
+.navbar-brand {
+    padding: 0 300px 0 80px;
 }
 
-.menu ul{
-    list-style: none;
-}
-
-.menu li{
-    display: inline-block;
-   padding: 5px 0 0 40px;
-}
-
-.menu li a{
+.container-fluid a {
     color: #f8f9fa;
-    text-decoration: none;
-    display: block;
-    padding: 15px 30px;
-    font-size: 20px ;
 }
 
-.menu li a:hover{
-    background:#f8f9fa;
-    opacity: 70%;
-    color: #333;
+.navbar-nav li {
+    padding: 5px 0 0 50px;
+    font-size: 20px;
 }
 
-.barra{
-    color: #f8f9fa;
-    padding: 15px;
-}
-
-.menu img {
-    position: absolute;
-    margin: 1px 25px;
-    left: 2px;
-    top: 1px;
-    }
-
-/*Hero*/
-
-.contenido-index {
-    background-image: url("../img/fondo-locura1.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.slogan {
-    padding: 0;
-    height:70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: whitesmoke;
-    animation-name: slogan-animated;
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.slogan h1{
-    font-size: 45px;
-    animation-name: slogantype-animated;
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes slogan-animated {
-    0% { color: whitesmoke;}
-    40% {color: #fee440; }
-    80% {color: #f77f00;}
-}
-
-@keyframes slogantype-animated {
-    0% {  font-size: 45px;}
-    40% {font-size: 60px; }
-    80% {font-size: 90px;}
-}
-
-/*Pie de pagina*/
-
-.pie-de-pagina{
-    width: 100%;
-    height: 22vh;
-    box-shadow:#adb5bd;
-    background: rgb(76,76,76);
-    background: -moz-linear-gradient(top,  rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(0,0,0,1) 18%, rgba(22,22,22,1) 34%, rgba(22,22,22,1) 45%, rgba(28,28,28,1) 56%, rgba(17,17,17,1) 67%, rgba(17,17,17,1) 77%, rgba(68,68,68,1) 91%, rgba(79,   79,79,1) 100%); 
-    background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(0,0,0,1) 18%,rgba(22,22,22,1) 34%,rgba(22,22,22,1) 45%,rgba(28,28,28,1) 56%,rgba(17,17,17,1) 67%,rgba(17,17,17,1) 77%,rgba(68,68,68,1) 91%,rgba(79,79,79,1) 100%); 
-    background: linear-gradient(to bottom,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(0,0,0,1) 18%,rgba(22,22,22,1) 34%,rgba(22,22,22,1) 45%,rgba(28,28,28,1) 56%,rgba(17,17,17,1) 67%,rgba(17,17,17,1) 77%,rgba(68,68,68,1) 91%,rgba(79,79,79,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c',    endColorstr='#4f4f4f',GradientType=0 );
-}
-    
-.contenedor-cajas{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px ;
-    width: 100%;
-    color: #f8f9fa;
-    text-align: center;
-    align-items: center;
-}
-    
-    /*Logo*/
-    
-.contenedor-cajas figure{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-    
-.caja-1 img{
+/*footer*/
+.log-footer img {
     width: 150px;
     height: 150px;
-   
 }
 
-.caja-1 img{
-    transition: 1.2s;
+.redes img {
+    margin: 0 15px;
 }
-    
-.caja-1 img:hover{
-    transform: rotate(1turn);
-}
-    
-    /*Redes*/
-    
-.caja-2{
-    width: 100%;
-    height: 200px;
-    display: grid;
-    gap: 25px;
-    justify-content: center;
-}
-    
-.seguinos {
-    margin-bottom: 10px;
-    font-size: 2rem;
-    padding-top: 20px;
-}
-    
-.contacto{
-    width: 230px;
-    height: 200px;
-    display: flex;
-    justify-content: space-between;  
-}
-        
-    .contacto img {
-        width: 30%;
-        height: 30%;     
-    }
-
-    .caja-2 img{
-        transition: 1.5s;
-    }
-    
-    .caja-2 img:hover{
-        transform: scale(1.3);
-    }
-
-    /*Copyright*/
 
 .copy {
-    width: 100%;
-    height: 200px;
-    display: grid;
-    row-gap: 50px;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
+    color: #adb5bd;
+    margin-top: 80px;
 }
 
 .copy span {
-    font-weight: bold;
+    font-weight: bold;   
 }
-
 
     /*NOSOTROS*/   
     
 .contenedor {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    width: 100%;
-    height: 92vh;
+    height: 75vh;
     justify-content: center;
     background-color: #adb5bd;
     align-items: center;
@@ -285,7 +96,6 @@ footer
 }
 
 
-
 .iconos p {
     transition: 1s;
     opacity: 0%;
@@ -316,10 +126,10 @@ h1 {
 /*Galería*/
 .galeria {
     display: grid;
-    grid-template-columns: repeat( 3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat( 4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     width: 80%;
-    height: 70vh;
+    height: 60vh;
     justify-content: space-between;
     gap: 30px;
     justify-content: center;
@@ -346,55 +156,26 @@ h1 {
 
 /*EXPERIENCIAS*/
 
-.contenedor-experiencias{
-    width: 100%;
-    height: 80vh;
-    background-color: #adb5bd;
-    text-align: center;
-    justify-content: center;
-    padding: 25px 0;
-}
-
 /*Cards*/
 .card-container {
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
-    margin: 20px;
-    justify-content: space-evenly
+    padding: 2% 0;
+    margin: 0 20%;
+    color: #adb5bd;
+    text-align: center;
+    font-family: "roboto";
+    font-size: 8vh;
 }
 
 .card {
     width: 300px;
-    height: 530px;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: #f8f9fa;
-    box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
-    transition: 1s;
-}
-
-.card:hover{
-    background-color: #dc2f02;
-    color: #f8f9fa;
-    transform: scale(1.3);
-}
-
-.card img {
-    width: 100%; 
-    display: block;
-}
-
-.card h2 {
-    font-size: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding:10px;
+    height: 540px;
 }
 
 .card p {
     text-align: justify;
     padding: 0 20px;
+    color: #1b263b;
+    font-size: 15px;
 }
 
 /*CONTACTANOS*/
@@ -492,103 +273,12 @@ h1 {
 
 @media screen and (min-width:481px) and (max-width:768px) {
 
-    /*Nav*/
-    .menu a {
-        font-size: 10px;
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
     /*Pie de pagina*/
     .pie-de-pagina{
         height: auto;
     }
 
-    .contenedor-cajas {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .caja-1 {
-        height:50px;
-        width: 50px;
-        padding-top: 10px;
-    }
-    .caja-1 img{
-        height: 100px;
-        width: 100px;
-    }
-
-    .caja-2 {
-        height:50px;
-        width: 50px;
-    } 
-
-    .contacto {
-        height:120px;
-        width: 120px;
-    }
-
-    /*Index*/
-    .contenido-index h1{
-        font-size: 30px;
-    }
-
-    /*Nosotros*/
-    .contenedor {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contenedor h1 {
-        font-size: 30px;
-        padding: 0;
-    }
-
-    .contenedor-nosotros {
-        flex-direction: column;
-    }
-
-    .iconos img {
-        height:50px;
-        width: 50px;
-    }
-
-    .iconos h2 {
-        font-size: 15px;
-    }
-
-    .iconos .parrafo {
-        font-size: 10px;
-    }
-
-    /*Galeria*/
-    .contenedor-galeria{
-        height: auto;
-    }
-
-    .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-
-    .galeria img{
-        height: 80px;
-        width: 80px;
-    }
-
-    /*Experiencias*/
-
-    .contenedor-experiencias {
-        height: auto;
-    }
-
-    .card-container{
-        margin: 10px;
-    }
+    /*EXPERIENCIAS*/
 
     .card {
         margin: 5px;
@@ -653,63 +343,6 @@ h1 {
 
 @media screen and  (max-width: 480px) {
 
-/*Nav*/
-
-.menu a {
-    font-size: 9px;
-    padding: 2px;
-    justify-content: center;
-}
-
-.menu img {
-    visibility: hidden;
-}
-
-/*Pie de pagina*/
-.pie-de-pagina{
-    height: auto;
-    width: 100%;
-}
-
-.contenedor-cajas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.caja-1 {
-    height:10px;
-    width: 100%;
-}
-.caja-1 img{
-    height: 70px;
-    width: 70px;
-}
-
-.caja-2 {
-    height:10px;
-    width: 100%;
-    padding: 0%;
-} 
-
-.caja-2 span {
-    font-size: 10px;
-}
-
-.contacto {
-    height:60px;
-    width: 60px;
-}
-.copya {
-    width: 100%;
-}
-
-.copy small {
-    font-size: 5px;
-}
-
-
     /*Nosotros*/
     .contenedor {
         display: flex;
@@ -758,18 +391,6 @@ h1 {
     }
 
     /*Experiencias*/
-
-    .contenedor-experiencias h1 {
-        font-size: 15px;
-        padding-bottom: 10px;
-    }
-
-    .contenedor-experiencias {
-        height: auto;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
 
     .card-container {
         display: block;

@@ -13,53 +13,88 @@
 
 <body>
 
-<div class="grid-area">
 
-   <header class="encabezado">
-        <nav class="menu">
-            <img src="./img/logo-mini.png" alt="logo">
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/nosotros.html">Quienes Somos</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/productos.html">Productos</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/experiencias.html">Experiencias</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/contactanos.html">Contactanos</a></li>
-            </ul>
-        </nav>
-    </header>
-   
-<!--Texto principal-->
+    <div class="container-fluid bg-dark">
 
-    <section class="contenido-index">
-            <div class="slogan">
-                <h1> Imagina, Sueña y Crea! </h1> 
-            </div>    
-    </section>
-
-<!--Pie de Pagina-->
-    <footer class="pie-de-pagina">
-        <section class="contenedor-cajas">
-            <div class="caja-1">
-                <img src="./img/logo.png" alt="logo">
-            </div>
-            <div class="caja-2">
-                <span class="seguinos">Seguinos!</span>
-                <div class="contacto">
-                    <img src="./img/red1.png" alt="red1">
-                    <img src="./img/red2.png" alt="red2">
-                    <img src="./img/red3.png" alt="red3">
+        <!--Barra Navegacion-->
+        <header class="row">
+            <div class="col-12">
+            <nav class="navbar navbar-expand-lg bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="nav">
+                        <img src="./img/logo-mini.png" alt="logo-mini" width="60" height="60" class="d-inline-block align-text-center" >
+                        BLD Games
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                    <li class="nav-item">
+                                <a class="nav-link" href="./index.html"> Inicio </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/nosotros.html"> Nosotros </a>
+                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/productos.html"> Productos </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/experiencias.html"> Experiencias </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contactanos.html"> Contacto </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="copy">
+            </nav>
+        </div>
+    </header>
+    
+        <!--imagen hero-->
+        <section class="row">
+            <div class="col-12">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/fondo-locura1.png" class="d-block w-100" alt="fondo-locura1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/fondo-2.png" class="d-block w-100" alt="fondo-2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/fondo-3.png" class="d-block w-100" alt="fondo-3">
+                        </div>
+                    </div>  
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+            </div> 
+        </section>
+    
+        <!--Footer-->
+        <footer class="row">
+            <div class="col-4">
+                <img src="./img/logo.png" width="150" height="150" class="d-block" alt="logo-2">
+              </div>
+              <div class="col-4 pt-5 redes">
+                <img src="./img/red1.png" width="60" height="60" class="d-inline-block" alt="red1">
+                <img src="./img/red2.png" width="60" height="60" class="d-inline-block" alt="red2">
+                <img src="./img/red3.png" width="60" height="60" class="d-inline-block" alt="red3">
+              </div>
+              <div class="col-4 copy">
                 <small> Copy 2022 <span> BLD Games </span> - Derechos Reservados </small>
-            </div>
-        </section>    
-    </footer>
-</div>
+              </div>
+        </footer>
+    
+    </div>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
 

@@ -12,26 +12,46 @@
 </head>
 
 <body>
-   
-<header class="encabezado">
 
-        <nav class="menu">
-            <img src="../img/logo-mini.png" alt="logo">
-                <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/nosotros.html">Quienes Somos</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/productos.html">Productos</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/experiencias.html">Experiencias</a></li>
-                <li class="barra"> | </li>
-                <li><a href="../pages/contactanos.html">Contactanos</a></li>
-                </ul>
-        </nav>
-</header>
-    
-    
+<div class="container-fluid bg-dark">
+
+        <!--Barra Navegacion-->
+    <header class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="nav">
+                        <img src="../img/logo-mini.png" alt="logo-mini" width="60" height="60" class="d-inline-block align-text-center" >
+                        BLD Games
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                    <li class="nav-item">
+                                <a class="nav-link" href="../index.html"> Inicio </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/nosotros.html"> Nosotros </a>
+                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/productos.html"> Productos </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/experiencias.html"> Experiencias </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/contactanos.html"> Contacto </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
     <section class="contenedor-galeria">  
         <h1>Productos</h1>
 
@@ -47,7 +67,6 @@
                 </li>
                 <li>
                     <img src="../img/gal-3.png" alt="3">    
-                    
                 </li>
                 <li>
                     <img src="../img/gal-4.png" alt="4">    
@@ -61,31 +80,29 @@
                 <li>
                     <img src="../img/gal-2.png" alt="2">    
                 </li>
-                <li>
-                    <img src="../img/gal-8.png" alt="8">    
-                </li>
             </ul>
     </section>
 
-    <!--Pie de Pagina-->
-    <footer class="pie-de-pagina">
-        <section class="contenedor-cajas">
-            <div class="caja-1">
-                <img src="../img/logo.png" alt="logo">
-            </div>
-            <div class="caja-2">
-                <span class="seguinos">Seguinos!</span>
-                <div class="contacto">
-                    <img src="../img/red1.png" alt="red1">
-                    <img src="../img/red2.png" alt="red2">
-                    <img src="../img/red3.png" alt="red3">
-                </div>
-            </div>
-            <div class="copy">
-                <small> Copy 2022 <span> BLD Games </span> - Derechos Reservados </small>
-            </div>
-        </section>    
+
+
+    <!--Footer-->
+    <footer class="row">
+        <div class="col-4">
+            <img src="../img/logo.png" width="150" height="150" class="d-block" alt="logo-2">
+        </div>
+        <div class="col-4 pt-5 redes">
+            <img src="../img/red1.png" width="50" height="50" class="d-inline-block" alt="red1">
+            <img src="../img/red2.png" width="50" height="50" class="d-inline-block" alt="red2">
+            <img src="../img/red3.png" width="50" height="50" class="d-inline-block" alt="red3">
+        </div>
+        <div class="col-4 copy">
+            <small> Copy 2022 <span> BLD Games </span> - Derechos Reservados </small>
+        </div>
     </footer>
+
+</div>
+
+
 
     <script src="../js/bootstrap.bundle.min.js"></script>
 
