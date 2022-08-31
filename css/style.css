@@ -18,6 +18,10 @@ body{
 /*INDEX*/
 
 /*nav*/
+.navbar {
+    background-color: #1b263b;
+}
+
 .navbar-brand {
     padding: 0 300px 0 80px;
 }
@@ -26,29 +30,97 @@ body{
     color: #f8f9fa;
 }
 
+
 .navbar-nav li {
     padding: 5px 0 0 50px;
     font-size: 20px;
 }
 
+.navbar li a:hover{
+    background:#f8f9fa;
+    opacity: 60%;
+    color: #333;
+    border-radius: 5px;
+}
+
+
 /*footer*/
-.log-footer img {
+.pie-de-pagina{
+    width: 100%;
+    height: 22vh;
+    box-shadow:#adb5bd;
+    background-color: #1b263b;
+}
+    
+.contenedor-cajas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px ;
+    width: 100%;
+    color: #f8f9fa;
+    text-align: center;
+    align-items: center;
+}
+    
+    /*Logo*/
+    
+.contenedor-cajas figure{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+    
+.caja-1 img{
     width: 150px;
     height: 150px;
+   
 }
 
-.redes img {
-    margin: 0 15px;
+.caja-1 img{
+    transition: 1.2s;
+}
+    
+.caja-1 img:hover{
+    transform: rotate(1turn);
+}
+    
+    /*Redes*/
+    
+.caja-2{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    gap: 25px;
+    justify-content: center;
+}
+    
+.seguinos {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+    
+.contacto{
+    width: 230px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;  
+}
+        
+.contacto img {
+    width: 30%;
+    height: 30%;     
 }
 
-.copy {
-    color: #adb5bd;
-    margin-top: 80px;
+.caja-2 img{
+    transition: 1.5s;
+}
+    
+.caja-2 img:hover{
+    transform: scale(1.3);
 }
 
-.copy span {
-    font-weight: bold;   
-}
 
     /*NOSOTROS*/   
     
@@ -59,14 +131,12 @@ body{
     align-items: center;
 }
 
-
 .contenedor h1 {
     display: flex;
     font-size: 8vh;
     justify-content: center;
     height: 10vh; 
 }
-
 
 .contenedor-nosotros{
     display: flex;
@@ -157,29 +227,59 @@ h1 {
 /*EXPERIENCIAS*/
 
 /*Cards*/
-.card-container {
-    padding: 2% 0;
-    margin: 0 20%;
-    color: #adb5bd;
+
+.contenedor-experiencias{
+    width: 100%;
+    height: 80vh;
+    background-color: #adb5bd;
     text-align: center;
-    font-family: "roboto";
-    font-size: 8vh;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+/*Cards*/
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 20px;
+    justify-content: space-evenly
 }
 
 .card {
     width: 300px;
     height: 540px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
+    transition: 1s;
+}
+
+.card:hover{
+    background-color: #dc2f02;
+    color: #f8f9fa;
+    transform: scale(1.2);
+}
+
+.card img {
+    width: 100%; 
+    display: block;
+}
+
+.card h2 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding:10px;
 }
 
 .card p {
     text-align: justify;
     padding: 0 20px;
-    color: #1b263b;
-    font-size: 15px;
 }
 
-/*CONTACTANOS*/
-
+/*CONTACTACTO*/
 .contactanos {
     display: grid;
     grid-template-columns: 1fr;
@@ -197,13 +297,11 @@ h1 {
     margin-bottom: 40px;
 }
 
-
 .contactanos h1 {
     font-size: 8vh;
     padding: 10px;
     margin: 5px auto;
 }
-
 
 /*Formulario*/
 .formulario {
@@ -265,8 +363,12 @@ h1 {
 
 /* MEDIA QUERIES*/
 @media screen and (min-width:769px) and (max-width:1024px) {
-    .grid-area{
+    body{
         width: 100%;
+    }
+
+    .pie-de-pagina {
+        height: auto;
     }
     
 }
@@ -278,6 +380,90 @@ h1 {
         height: auto;
     }
 
+    .contenedor-cajas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .caja-1 {
+        height:50px;
+        width: 50px;
+        padding-top: 10px;
+    }
+    .caja-1 img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .caja-2 {
+        display: block;
+        height:50px;
+        width: 50px;
+    } 
+
+    .contacto {
+        height:130px;
+        width: 130px;
+    }
+
+    .seguinos {
+        visibility: hidden;
+    }
+
+    .copy {
+        padding-bottom: 10px;
+    }
+
+    
+    /*Nosotros*/
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedor h1 {
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .contenedor-nosotros {
+    height: auto;
+    }
+
+    .iconos img {
+        height:50px;
+        width: 50px;
+    }
+
+    .iconos h2 {
+        font-size: 15px;
+    }
+
+    .iconos .parrafo {
+        font-size: 10px;
+    }
+
+
+    /*Galeria*/
+    .contenedor-galeria h1 {
+        font-size: 15px;
+        padding-bottom: 50px;
+    }
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        width: 90%;
+        height: auto;
+    }
+
+    .galeria img{
+        height: 80px;
+        width: 80px;
+    }
+
+
     /*EXPERIENCIAS*/
 
     .card {
@@ -285,11 +471,21 @@ h1 {
         height: auto;
         padding-bottom: 5px;
     }
+    
+    .card h2 {
+        font-size: 12px;
+        padding-top: 2px;
+    }
 
     .card p {
-        font-size: 4px;
+        font-size: 10px;
         overflow: hidden;
-        padding: 5px 15px;
+        padding: 1px 15px;
+    }
+    .card:hover{
+        background-color: #dc2f02;
+        color: #f8f9fa;
+        transform: none;
     }
 
     /*contactanos*/
@@ -325,7 +521,6 @@ h1 {
         padding: 5px;
     }
     
-    
     .formulario .consulta {
         width: 95%;
         margin: 2px;
@@ -343,6 +538,79 @@ h1 {
 
 @media screen and  (max-width: 480px) {
 
+    /*Pie de pagina*/
+    .pie-de-pagina{
+        height: auto;
+    }
+
+    .contenedor-cajas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .caja-1 {
+        height:50px;
+        width: 50px;
+        padding-top: 10px;
+    }
+    .caja-1 img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .caja-2 {
+        display: block;
+        height:50px;
+        width: 50px;
+    } 
+
+    .seguinos {
+        visibility: hidden;
+    }
+
+    .contacto {
+        height:100px;
+        width: 100px;
+    }
+
+    .copy {
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+
+    
+    /*Nosotros*/
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedor h1 {
+        font-size: 30px;
+        padding: 0;
+    }
+
+.contenedor-nosotros {
+    height: auto;
+    }
+
+    .iconos img {
+        height:50px;
+        width: 50px;
+    }
+
+    .iconos h2 {
+        font-size: 15px;
+    }
+
+    .iconos .parrafo {
+        font-size: 10px;
+    }
+
+
     /*Nosotros*/
     .contenedor {
         display: flex;
@@ -350,8 +618,8 @@ h1 {
     }
 
     .contenedor h1 {
-        font-size: 15px;
-        padding: 0;
+        font-size: 25px;
+        padding-top: 15px;
     }
 
     .contenedor-nosotros {
@@ -360,7 +628,7 @@ h1 {
     }
 
     .iconos {
-        height:50px;
+        height:auto;
         width: 100%;
         margin: 10px;
     }
@@ -370,13 +638,10 @@ h1 {
         width: 50px;
     }
 
-    .iconos h2, .parrafo {
-        visibility: hidden;
-    }
-
     /*Galeria*/
+
     .contenedor-galeria h1 {
-        font-size: 15px;
+        font-size: 25px;
         padding-bottom: 50px;
     }
     .galeria {
@@ -392,24 +657,38 @@ h1 {
 
     /*Experiencias*/
 
+    .contenedor-experiencias h1 {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    .contenedor-experiencias {
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
     .card-container {
         display: block;
         justify-content: center;
         align-items: center;
         width: 75%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .card {
         margin: 20px;
         height:200px;
-        width: 100%;
+        width: 80%;
         overflow: hidden;
     }
 
     /*contactanos*/
 
     .contactanos h1 {
-        font-size: 15px;
+        font-size: 25px;
         padding-bottom: 5px;
         text-align: center;
     }
@@ -428,7 +707,7 @@ h1 {
 
     .formulario {
         width: 190px;
-        height: 200px;
+        height: 230px;
         padding-bottom: 5px;
         margin-bottom: 15px;
     }
@@ -459,7 +738,7 @@ h1 {
     
     .formulario .boton {
         width: 40%;
-        margin: 2px;
+        margin: 1px;
         padding: 5px;
     }
 
