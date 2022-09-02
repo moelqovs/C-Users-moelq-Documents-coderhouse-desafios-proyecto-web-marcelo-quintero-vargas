@@ -87,40 +87,15 @@ body{
     
     /*Redes*/
     
-.caja-2{
-    width: 100%;
-    height: 200px;
-    display: grid;
-    gap: 25px;
-    justify-content: center;
-}
-    
 .seguinos {
     margin-bottom: 10px;
     font-size: 2rem;
     padding-top: 20px;
 }
-    
-.contacto{
-    width: 230px;
-    height: 200px;
-    display: flex;
-    justify-content: space-between;  
-}
-        
-.contacto img {
-    width: 30%;
-    height: 30%;     
-}
 
-.caja-2 img{
-    transition: 1.5s;
-}
-    
 .caja-2 img:hover{
     transform: scale(1.3);
 }
-
 
     /*NOSOTROS*/   
     
