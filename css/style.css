@@ -30,7 +30,6 @@ body{
     color: #f8f9fa;
 }
 
-
 .navbar-nav li {
     padding: 5px 40px 0 20px;
     font-size: 22px;
@@ -43,59 +42,6 @@ body{
     border-radius: 5px;
 }
 
-
-/*footer*/
-.pie-de-pagina{
-    width: 100%;
-    height: 22vh;
-    box-shadow:#adb5bd;
-    background-color: #1b263b;
-}
-    
-.contenedor-cajas{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px ;
-    width: 100%;
-    color: #f8f9fa;
-    text-align: center;
-    align-items: center;
-}
-    
-    /*Logo*/
-    
-.contenedor-cajas figure{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-    
-.caja-1 img{
-    width: 150px;
-    height: 150px;
-   
-}
-
-.caja-1 img{
-    transition: 1.2s;
-}
-    
-.caja-1 img:hover{
-    transform: rotate(1turn);
-}
-    
-    /*Redes*/
-    
-.seguinos {
-    margin-bottom: 10px;
-    font-size: 2rem;
-    padding-top: 20px;
-}
-
-.caja-2 img:hover{
-    transform: scale(1.3);
-}
 
     /*NOSOTROS*/   
     
@@ -308,7 +254,6 @@ h1 {
     border: 1px solid #ffbe0b;
 }
 
-
 .formulario .consulta {
     width: 95%;
     background-color: #f8f9fa;
@@ -335,6 +280,58 @@ h1 {
 }
 
 
+/*FOOTER*/
+.pie-de-pagina{
+    width: 100%;
+    height: 22vh;
+    box-shadow:#adb5bd;
+    background-color: #1b263b;
+}
+    
+.contenedor-cajas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px ;
+    width: 100%;
+    color: #f8f9fa;
+    text-align: center;
+    align-items: center;
+}
+    
+    /*Logo*/
+    
+.contenedor-cajas figure{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+    
+.caja-1 img{
+    width: 150px;
+    height: 150px;
+}
+
+.caja-1 img{
+    transition: 1.2s;
+}
+    
+.caja-1 img:hover{
+    transform: rotate(1turn);
+}
+    
+    /*Redes*/
+    
+.seguinos {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+
+.caja-2 img:hover{
+    transform: scale(1.3);
+}
+
 
 /* MEDIA QUERIES*/
 @media screen and (min-width:769px) and (max-width:1024px) {
@@ -349,8 +346,151 @@ h1 {
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
+    
+    /*NOSOTROS*/
 
-    /*Pie de pagina*/
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedor-nosotros {
+    height: auto;
+    flex-direction: column;
+    }
+
+    .contenedor h1 {
+        font-size: 32px;
+        padding-top: 15px;
+    }
+
+    .iconos {
+        height:auto;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .iconos img {
+        height:60px;
+        width: 60px;
+    }
+
+    .iconos h2 {
+        font-size: 18px;
+    }
+
+    .iconos .parrafo {
+        font-size: 15px;
+        margin: 0 25px;
+    }
+
+
+    /*GALERIA*/
+
+    .contenedor-galeria h1 {
+        font-size: 32px;
+        padding-bottom: 30px;
+    }
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        width: 90%;
+        height: auto;
+    }
+
+    .galeria img{
+        height: 80px;
+        width: 80px;
+    }
+
+
+    /*EXPERIENCIAS*/
+
+    .contenedor-experiencias {
+        font-size: 32px;
+    }
+
+    .card {
+        margin: 5px;
+        height: auto;
+        padding-bottom: 5px;
+    }
+    
+    .card h2 {
+        font-size: 12px;
+        padding-top: 2px;
+    }
+
+    .card p {
+        font-size: 10px;
+        overflow: hidden;
+        padding: 1px 15px;
+    }
+    .card:hover{
+        background-color: #ffbe0b;
+        color: #f8f9fa;
+        transform: none;
+    }
+
+
+    /*CONTACTANOS*/
+
+    .contactanos {
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+    
+    .contenedor-contactanos {
+        margin-bottom: 5px; 
+        display: inline-block;  
+        margin-left: 36%;
+        margin-bottom: 15px;
+    }
+
+    .contactanos h1 {
+        font-size: 32px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    .formulario {
+        width: 240px;
+        height: 240px;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .mapa {
+        width: 240px;
+        height: 240px;
+        overflow: hidden;
+    }
+
+    .formulario .dato {
+        width: 95%;
+        margin: 2px;
+        padding: 3px;
+    }
+
+    .formulario h2 {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    .formulario .consulta {
+        width: 95%;
+        margin: 2px;
+        padding: 3px;
+    }
+    
+    .formulario .boton {
+        width: 40%;
+        margin: 5px;
+        padding: 8px;
+    }
+
+    /*FOOTER*/
     .pie-de-pagina{
         height: auto;
     }
@@ -390,8 +530,12 @@ h1 {
         padding-bottom: 10px;
     }
 
-    
-    /*Nosotros*/
+}
+
+
+@media screen and  (max-width: 480px) {
+
+    /*NOSOTROS*/
 
     .contenedor {
         display: flex;
@@ -399,13 +543,20 @@ h1 {
         height: auto;
     }
 
-    .contenedor h1 {
-        font-size: 30px;
-        padding: 0;
-    }
-
     .contenedor-nosotros {
     height: auto;
+    flex-direction: column;
+    }
+
+    .contenedor h1 {
+        font-size: 25px;
+        padding-top: 15px;
+    }
+
+    .iconos {
+        height:auto;
+        width: 100%;
+        margin: 10px;
     }
 
     .iconos img {
@@ -422,9 +573,10 @@ h1 {
     }
 
 
-    /*Galeria*/
+    /*GALERIA*/
+
     .contenedor-galeria h1 {
-        font-size: 15px;
+        font-size: 25px;
         padding-bottom: 50px;
     }
     .galeria {
@@ -440,197 +592,6 @@ h1 {
 
 
     /*EXPERIENCIAS*/
-
-    .card {
-        margin: 5px;
-        height: auto;
-        padding-bottom: 5px;
-    }
-    
-    .card h2 {
-        font-size: 12px;
-        padding-top: 2px;
-    }
-
-    .card p {
-        font-size: 10px;
-        overflow: hidden;
-        padding: 1px 15px;
-    }
-    .card:hover{
-        background-color: #ffbe0b;
-        color: #f8f9fa;
-        transform: none;
-    }
-
-    /*contactanos*/
-
-    .contactanos h1 {
-        font-size: 30px;
-    }
-    
-    .contenedor-contactanos {
-        margin-bottom: 25px;   
-    }
-
-    .formulario {
-        width: 190px;
-        height: 200px;
-        padding-bottom: 5px;
-    }
-
-    .mapa {
-        width: 190px;
-        height: 200px;
-        overflow: hidden;
-    }
-
-    .formulario .dato {
-        width: 95%;
-        margin: 2px;
-        padding: 3px;
-    }
-
-    .formulario h2 {
-        font-size: 12px;
-        padding: 5px;
-    }
-    
-    .formulario .consulta {
-        width: 95%;
-        margin: 2px;
-        padding: 3px;
-    }
-    
-    .formulario .boton {
-        width: 40%;
-        margin: 2px;
-        padding: 5px;
-    }
-
-}
-
-
-@media screen and  (max-width: 480px) {
-
-    /*Pie de pagina*/
-    .pie-de-pagina{
-        height: auto;
-    }
-
-    .contenedor-cajas {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .caja-1 {
-        height:50px;
-        width: 50px;
-        padding-top: 10px;
-    }
-    .caja-1 img{
-        height: 100px;
-        width: 100px;
-    }
-
-    .caja-2 {
-        display: block;
-        height:50px;
-        width: 50px;
-    } 
-
-    .seguinos {
-        visibility: hidden;
-    }
-
-    .contacto {
-        height:100px;
-        width: 100px;
-    }
-
-    .copy {
-        padding-bottom: 10px;
-        font-size: 15px;
-    }
-
-    
-    /*Nosotros*/
-
-    .contenedor {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-    .contenedor h1 {
-        font-size: 30px;
-        padding: 0;
-    }
-
-.contenedor-nosotros {
-    height: auto;
-    }
-
-    .iconos img {
-        height:50px;
-        width: 50px;
-    }
-
-    .iconos h2 {
-        font-size: 15px;
-    }
-
-    .iconos .parrafo {
-        font-size: 10px;
-    }
-
-
-    /*Nosotros*/
-    .contenedor {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contenedor h1 {
-        font-size: 25px;
-        padding-top: 15px;
-    }
-
-    .contenedor-nosotros {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .iconos {
-        height:auto;
-        width: 100%;
-        margin: 10px;
-    }
-
-    .iconos img {
-        height:100px;
-        width: 50px;
-    }
-
-    /*Galeria*/
-
-    .contenedor-galeria h1 {
-        font-size: 25px;
-        padding-bottom: 50px;
-    }
-    .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-        width: 90%;
-        height: auto;
-    }
-
-    .galeria img{
-        height: 80px;
-        width: 80px;
-    }
-
-    /*Experiencias*/
 
     .contenedor-experiencias h1 {
         font-size: 25px;
@@ -660,7 +621,8 @@ h1 {
         overflow: hidden;
     }
 
-    /*contactanos*/
+
+    /*CONTACTANOS*/
 
     .contactanos h1 {
         font-size: 25px;
@@ -704,7 +666,6 @@ h1 {
         padding: 5px;
     }
     
-    
     .formulario .consulta {
         width: 95%;
         margin: 2px;
@@ -717,4 +678,45 @@ h1 {
         padding: 5px;
     }
 
+
+    /*FOOTER*/
+    .pie-de-pagina{
+        height: auto;
+    }
+
+    .contenedor-cajas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .caja-1 {
+        height:50px;
+        width: 50px;
+        padding-top: 10px;
+    }
+    .caja-1 img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .caja-2 {
+        display: block;
+        height:50px;
+        width: 50px;
+    } 
+
+    .seguinos {
+        visibility: hidden;
+    }
+
+    .contacto {
+        height:100px;
+        width: 100px;
+    }
+
+    .copy {
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
 }
