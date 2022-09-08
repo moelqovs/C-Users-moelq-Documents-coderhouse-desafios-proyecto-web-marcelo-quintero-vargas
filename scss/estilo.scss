@@ -1,25 +1,595 @@
-/*footer redes*/
+@import '_font.scss';
+@import '_base.scss';
+@import '_bg.scss';
+@import '_varios.scss';
 
-.contacto {
-    width: 230px;
-    height: 200px;
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family; 
+    }
+
+h1 {
     display: flex;
-    justify-content: space-between;  
+    font-size:$font-size-1;
+    justify-content: center;
+    height: 15vh;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
-    img {
-        width: 30%;
-        height: 30%; 
+h2 {
+    font-size: $font-size-2;
+    text-align: center;
+    padding-bottom: 25px;
+    padding:$padding-1;
+}
+
+p {
+    text-align: justify;
+    padding: 0 20px;
+}
+
+
+/*INDEX*/
+
+/*nav*/
+
+.navbar {
+    @extend .navbar;
+
+    a {
+        color: $bg-color-w;
     }
 }
 
-.caja-2{
-    width: 100%;
-    height: 200px;
-    display: grid;
-    gap: 25px;
+.navbar-brand {
+    width: 60%;
+}
+
+.navbar-nav li {
+    padding: 5px 40px 0 20px;
+    font-size: 22px;
+}
+
+.navbar li a:hover{
+    background:#f8f9fa;
+    opacity: 60%;
+    color: #333;
+    border-radius: 5px;
+}
+
+
+/*NOSOTROS*/   
+
+.contenedor {
+    height: 75vh;
     justify-content: center;
+    background-color: $bg-color-g;
+    align-items: center;
+}
+
+.contenedor-nosotros{
+    @extend .contenedor-nosotros;
+}
+
+.iconos {
+    @extend .iconos;
+
+    img {
+        @include box (30%,30%);
+        padding-bottom: 15px;
+        } 
+
+    p {
+        transition: 1.5s;
+        opacity: 0%;
+    }
+}
+
+.iconos p:hover {
+    opacity: 100%;
+    transform: scale(1.2);
+}
+
+
+/*GALERIA PRODUCTOS*/
+
+.contenedor-galeria {
+    @include box(100%,80vh);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:$bg-color-w;
+}
+
+/*galeria*/
+.galeria {
+    @extend .galeria;
+
+    li{
+        list-style: none;
+    }
 
     img{
         transition: 1.5s;
+        opacity: 70%;
+        border-radius: 50px;
+    }
+}
+
+.galeria img:hover{
+    transform: scale(1.3);
+    opacity: 100%;
+    border-radius: 5px;
+}
+
+
+/*EXPERIENCIAS*/
+
+.contenedor-experiencias{
+    @include box(100%,85vh);
+
+    background-color: $bg-color-g;
+    text-align: center;
+    justify-content: center;
+    padding: $padding-3;
+}
+
+.card-container {
+    display: flex;
+    padding: $padding-4;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+
+.card {
+    @extend .card;
+}
+
+.card:hover{
+    background-color: $bg-color-y;
+    color: $bg-color-t;
+    transform: scale(1.1);
+}
+
+
+/*CONTACTACTO*/
+.contactanos {
+    @include box(100%,70vh);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    background-color: $bg-color-w;
+    align-items: center;
+}
+
+.contenedor-contactanos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+
+    main {
+        @extend .formulario;
+        @extend .dato;
+        @extend .consulta;
+        @extend .boton;
+    }
+}
+
+/*Mapa*/
+.mapa {
+    border: $border-s-1;
+    box-shadow: $bg-shadow;
+}
+
+
+/*FOOTER*/
+
+.pie-de-pagina{
+    @include box(100%,22vh);
+
+    background-color:$bg-color-navfoot;
+}
+
+.contenedor-cajas{
+    @extend .contenedor-cajas;
+
+    .caja-1 img{
+        @include box(150px,150px);
+        transition: 1.2s;
+    }
+
+
+    .caja-2{
+        padding: $padding-b1;
+
+        @include box(100%,200px);
+
+        .seguinos {
+            margin-bottom: 10px;
+            font-size: $font-size-2;
+            padding: 20px;
+
+            .contacto {
+                @include box(230px,200px); 
+            
+                img {
+                    @include box(20%,20%); 
+                }
+            }
+        }
+        
+    }
+}
+
+.caja-1 img:hover{
+    transform: rotate(1turn);
+}
+
+.caja-2 img:hover{
+    transform: scale(1.1);
+}
+
+
+$vista:mobile;
+
+body {
+    @if $vista==desktop {
+        @media screen and (min-width:768px) and (max-width:1024px) {
+
+            body{
+                width: 100%;
+            }
+            .pie-de-pagina {
+                height: auto;
+            }
+        }
+    }
+
+    @else if $vista==mobile {
+        @media screen and (max-width:767px){
+
+            /*NOSOTROS*/
+            .contenedor {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+        
+                h1 {
+                    font-size: 32px;
+                    padding-top: 15px;
+                }
+            }
+
+            .contenedor-nosotros {
+                height: auto;
+                flex-direction: column;
+            }
+            
+            .iconos {
+                height:auto;
+                width: 100%;
+                margin: 10px;
+        
+                img { 
+                    @include box(60px,60px); 
+                }
+
+                h2 { font-size: 18px; }
+        
+                p {
+                    font-size: 15px;
+                    margin: 0 25px;
+                }
+            }
+
+            /*GALERIA*/
+            .contenedor-galeria {
+                h1 {
+                    font-size: 32px;
+                    padding-bottom: 30px;  
+                }
+            }
+
+            .galeria {
+                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+                width: 90%;
+                height: auto;
+        
+                img{
+                    @include box (80px,80px);
+                }
+            }
+
+            /*EXPERIENCIAS*/
+            .contenedor-experiencias {
+                font-size: 32px;
+            }
+
+            .card {
+                margin: 5px;
+                height: auto;
+                padding-bottom: 5px;
+            
+                h2 {
+                    font-size: 12px;
+                    padding-top: 2px;
+                }
+        
+                p {
+                    font-size: 10px;
+                    overflow: hidden;
+                    padding: 1px 15px;
+                }
+            }
+
+            /*CONTACTANOS*/
+            .contactanos {
+                height: auto;
+                width: 100%;
+                display: block;
+        
+            h1 {
+                    font-size: 32px;
+                    padding-bottom: 5px;
+                    text-align: center;
+                }
+            }
+
+            .contenedor-contactanos {
+                margin-bottom: 5px; 
+                display: inline-block;  
+                margin-left: 36%;
+                margin-bottom: 15px;
+
+                main {
+                    .formulario {
+                        @include box(240px,240px);
+                        padding-bottom: 5px;
+                        margin-bottom: 15px;
+                    }       
+
+                    .dato {
+                        width: 95%;
+                        margin: 2px;
+                        padding: 3px;
+                    }
+
+                    h2 {
+                        font-size: 12px;
+                        padding: 5px;
+                    }
+
+                    .consulta {
+                        width: 95%;
+                        margin: 2px;
+                        padding: 3px;
+                    }
+
+                    .boton {
+                        width: 40%;
+                        margin: 5px;
+                        padding: 8px;
+                    }
+                }
+            }
+
+            .mapa {
+                @include box(240px,240px);
+                overflow: hidden;
+            }
+            /*FOOTER*/
+            .pie-de-pagina {
+                height: auto;
+            }
+
+            .contenedor-cajas{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            
+                .caja-1{
+                    @include box (50px,50px);
+                    padding-top: 10px;
+            
+                    img{
+                        @include box (100px,100px);
+                    }
+                }
+            
+                .caja-2{
+                    display: block;
+
+                    @include box(50px,50px);
+
+                    .seguinos {
+                        visibility: hidden;
+
+                        .contacto {
+                            @include box(130px,130px); 
+                        
+                            .copy {
+                                padding-bottom: 10px; 
+                            }
+                        }
+                    }
+                    
+                }
+            } 
+        }
+    }
+    
+    @else {
+        /*NOSOTROS*/
+
+        .contenedor-nosotros {
+            height: auto;
+            flex-direction: column;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            h1 {
+                font-size: 25px;
+                padding-top: 15px;
+            }
+        }
+
+        .iconos {
+            height:auto;
+            width: 100%;
+            margin: 10px;
+
+            img { 
+                @include box(50px,50px); 
+            }
+
+            h2 { font-size: 15px; }
+        
+            p {
+                font-size: 10px;
+            }
+        }
+        /*GALERIA*/
+        .contenedor-galeria {
+            h1 {
+                font-size: 25px;
+                padding-bottom: 50px;  
+            }
+        }
+        .galeria {
+            grid-template-columns: repea(auto-fit, minmax(60px, 1fr));
+            width: 90%;
+            height: auto;
+
+            img{
+                @include box (80px,80px);
+            }
+        }
+        /*EXPERIENCIAS*/
+        .contenedor-experiencias {
+            height: auto;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 25px;
+                padding-bottom: 10px;
+            }
+        }
+        .card-container {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+
+            .card {
+                margin: 20px;
+                overflow: hidden;
+                @include box(80%,200px);
+            }
+        }
+        /*CONTACTANOS*/
+        .contactanos {
+            height: auto;
+            width: 100%;
+            display: block;
+
+            h1 {
+                font-size: 25px;
+                padding-bottom: 5px;
+                text-align: center;
+            }
+        }
+        .contenedor-contactanos {
+            margin-bottom: 5px; 
+                isplay: block;  
+            margin: 20px 30%;
+
+            main {
+                .formulario {
+                    @include box(190px,230px);
+                    padding-bottom: 5px;
+                    margin-bottom: 15px;
+                }       
+
+                .dato {
+                    width: 95%;
+                    margin: 2px;
+                    padding: 3px
+                }
+
+                h2 {
+                    font-size: 12px;
+                    padding: 5px;
+                }   
+
+                .consulta {
+                    width: 95%;
+                    margin: 2px;
+                    padding: 3px;
+                }
+
+                .boton {
+                    width: 40%;
+                    margin: 1px;
+                    padding: 5px;
+                }
+            }
+        }
+        .mapa {
+            @include box (190px,200px);
+            overflow: hidden;
+        }
+        /*FOOTER*/
+        .pie-de-pagina {
+            height: auto;
+        }
+
+        .contenedor-cajas{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            .caja-1{
+                @include box (50px,50px);
+                padding-top: 10px;
+        
+                img{
+                    @include box(100px,100px);
+                }
+            }
+        
+            .caja-2{
+                display: block;
+                @include box(50px,50px);
+        
+                .seguinos {
+                    visibility: hidden;
+        
+                    .contacto {
+                        @include box(100px100px); 
+                    
+                        .copy {
+                            padding-bottom: 10px;
+                            font-size: 15px; 
+                        }
+                    }
+                }
+            }
+        }
     }
 }

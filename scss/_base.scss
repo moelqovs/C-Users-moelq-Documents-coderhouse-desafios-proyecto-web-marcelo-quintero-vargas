@@ -1,0 +1,105 @@
+
+.navbar {
+    background-color: #1b263b;
+}
+
+  
+
+/*Box NOSOTROS*/
+.contenedor-nosotros{
+    display: flex;
+    height: 60vh;
+    padding-top: 25px;
+}
+
+.iconos {
+    text-align: center;
+    padding: 0px 80px;
+}
+
+
+/*Galería*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 80%;
+    height: 60vh;
+    justify-content: space-between;
+    gap: 30px;
+    cursor: pointer;
+}
+
+/*Card EXPERIENCIAS*/
+.card {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
+    transition: 1s;
+}
+
+
+/*Formulario CONTACTO*/
+.formulario {
+    width: 400px;
+    background-color: #adb5bd;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1b263b;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
+}
+
+
+.formulario .dato {
+    width: 95%;
+    background-color: #f8f9fa;
+    margin: 8px;
+    padding: 10px;
+    border: 1px solid #ffbe0b;
+}
+
+.formulario .consulta {
+    width: 95%;
+    background-color: #f8f9fa;
+    margin: 8px;
+    padding: 50px;
+    border: 1px solid #ffbe0b;
+}
+
+.formulario .boton {
+    width: 20%;
+    background-color: #415a77;
+    margin: 8px;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #1b263b;
+    color: #f8f9fa;
+}
+
+/*Contenedor cajas Footer*/
+
+.contenedor-cajas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px ;
+    width: 100%;
+    color: #f8f9fa;
+    text-align: center;
+    align-items: center;
+}
+
+
+@mixin box ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+
