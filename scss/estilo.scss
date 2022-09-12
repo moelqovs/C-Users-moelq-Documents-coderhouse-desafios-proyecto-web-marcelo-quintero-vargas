@@ -468,7 +468,7 @@ body {
             }
         }
         .galeria {
-            grid-template-columns: repea(auto-fit, minmax(60px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
             width: 90%;
             height: auto;
 
