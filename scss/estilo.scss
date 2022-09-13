@@ -311,22 +311,31 @@ body {
             /*EXPERIENCIAS*/
             .contenedor-experiencias {
                 font-size: 32px;
+                height: auto
             }
 
-            .card {
-                margin: 5px;
-                height: auto;
-                padding-bottom: 5px;
+
+            .card-container {
+            width: fit-content;
+            margin: 0 auto;
+            display: block;
+
+
+                .card {
+                    margin: 35px;
+                    height: auto;
+                    padding-bottom: 5px;
             
-                h2 {
-                    font-size: 12px;
-                    padding-top: 2px;
-                }
+                    h2 {
+                        font-size: 12px;
+                        padding-top: 2px;
+                    }
         
-                p {
-                    font-size: 10px;
-                    overflow: hidden;
-                    padding: 1px 15px;
+                    p {
+                        font-size: 10px;
+                        overflow: hidden;
+                        padding: 1px 15px;
+                    }
                 }
             }
 
@@ -346,8 +355,9 @@ body {
             .contenedor-contactanos {
                 margin-bottom: 5px; 
                 display: inline-block;  
-                margin-left: 36%;
+                margin-left: 20%;
                 margin-bottom: 15px;
+                justify-content: center;
 
                 main {
                     .formulario {
@@ -363,7 +373,7 @@ body {
                     }
 
                     h2 {
-                        font-size: 12px;
+                        font-size: 10px;
                         padding: 5px;
                     }
 
@@ -374,7 +384,7 @@ body {
                     }
 
                     .boton {
-                        width: 40%;
+                        width: 20%;
                         margin: 5px;
                         padding: 8px;
                     }
@@ -382,8 +392,9 @@ body {
             }
 
             .mapa {
-                @include box(240px,240px);
+                @include box(400px,300px);
                 overflow: hidden;
+                margin-top:20px;
             }
             /*FOOTER*/
             .pie-de-pagina {
@@ -405,16 +416,14 @@ body {
                 }
             
                 .caja-2{
-                    display: block;
-
-                    @include box(50px,50px);
+                    visibility: hidden;
 
                     .seguinos {
                         visibility: hidden;
 
                         .contacto {
-                            @include box(130px,130px); 
-                        
+                            visibility: hidden;
+                            
                             .copy {
                                 padding-bottom: 10px; 
                             }
@@ -489,12 +498,9 @@ body {
             }
         }
         .card-container {
+            width: fit-content;
+            margin: 0 auto;
             display: block;
-            justify-content: center;
-            align-items: center;
-            width: 75%;
-            margin-left: auto;
-            margin-right: auto;
 
             .card {
                 margin: 20px;
@@ -508,6 +514,7 @@ body {
             width: 100%;
             display: block;
 
+
             h1 {
                 font-size: 25px;
                 padding-bottom: 5px;
@@ -517,11 +524,11 @@ body {
         .contenedor-contactanos {
             margin-bottom: 5px; 
             display: block;  
-            margin: 20px 30%;
+            margin: 20px 20%;
 
             main {
                 .formulario {
-                    @include box(190px,230px);
+                    @include box(200px,200px);
                     padding-bottom: 5px;
                     margin-bottom: 15px;
                 }       
@@ -551,7 +558,7 @@ body {
             }
         }
         .mapa {
-            @include box (190px,200px);
+            @include box (200px,200px);
             overflow: hidden;
         }
         /*FOOTER*/
@@ -574,15 +581,14 @@ body {
             }
         
             .caja-2{
-                display: block;
-                @include box(50px,50px);
+                visibility: hidden;
         
                 .seguinos {
                     visibility: hidden;
         
                     .contacto {
-                        @include box(100px100px); 
-                    
+                        visibility: hidden;
+
                         .copy {
                             padding-bottom: 10px;
                             font-size: 15px; 

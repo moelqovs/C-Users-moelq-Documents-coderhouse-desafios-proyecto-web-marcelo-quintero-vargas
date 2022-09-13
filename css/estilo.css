@@ -284,18 +284,23 @@ p {
         width: 80px;
         height: 80px; }
     body .contenedor-experiencias {
-      font-size: 32px; }
-    body .card {
-      margin: 5px;
-      height: auto;
-      padding-bottom: 5px; }
-      body .card h2 {
-        font-size: 12px;
-        padding-top: 2px; }
-      body .card p {
-        font-size: 10px;
-        overflow: hidden;
-        padding: 1px 15px; }
+      font-size: 32px;
+      height: auto; }
+    body .card-container {
+      width: fit-content;
+      margin: 0 auto;
+      display: block; }
+      body .card-container .card {
+        margin: 35px;
+        height: auto;
+        padding-bottom: 5px; }
+        body .card-container .card h2 {
+          font-size: 12px;
+          padding-top: 2px; }
+        body .card-container .card p {
+          font-size: 10px;
+          overflow: hidden;
+          padding: 1px 15px; }
     body .contactanos {
       height: auto;
       width: 100%;
@@ -307,8 +312,9 @@ p {
     body .contenedor-contactanos {
       margin-bottom: 5px;
       display: inline-block;
-      margin-left: 36%;
-      margin-bottom: 15px; }
+      margin-left: 20%;
+      margin-bottom: 15px;
+      justify-content: center; }
       body .contenedor-contactanos main .formulario, body .contenedor-contactanos main main {
         width: 240px;
         height: 240px;
@@ -319,20 +325,21 @@ p {
         margin: 2px;
         padding: 3px; }
       body .contenedor-contactanos main h2 {
-        font-size: 12px;
+        font-size: 10px;
         padding: 5px; }
       body .contenedor-contactanos main .consulta, body .contenedor-contactanos main main {
         width: 95%;
         margin: 2px;
         padding: 3px; }
       body .contenedor-contactanos main .boton, body .contenedor-contactanos main main {
-        width: 40%;
+        width: 20%;
         margin: 5px;
         padding: 8px; }
     body .mapa {
-      width: 240px;
-      height: 240px;
-      overflow: hidden; }
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      margin-top: 20px; }
     body .pie-de-pagina {
       height: auto; }
     body .contenedor-cajas {
@@ -347,14 +354,10 @@ p {
           width: 100px;
           height: 100px; }
       body .contenedor-cajas .caja-2 {
-        display: block;
-        width: 50px;
-        height: 50px; }
+        visibility: hidden; }
         body .contenedor-cajas .caja-2 .seguinos {
           visibility: hidden; }
           body .contenedor-cajas .caja-2 .seguinos .contacto {
-            width: 130px;
-            height: 130px; }
+            visibility: hidden; }
             body .contenedor-cajas .caja-2 .seguinos .contacto .copy {
               padding-bottom: 10px; } }
-              
