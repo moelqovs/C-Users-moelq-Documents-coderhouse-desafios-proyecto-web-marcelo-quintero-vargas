@@ -18,6 +18,7 @@ h1 {
     align-items: center;
     text-transform: uppercase;
     font-weight: bold;
+    font-style: italic;
 }
 
 h2 {
@@ -51,7 +52,7 @@ p {
 
 .navbar-nav li {
     padding: 5px 40px 0 20px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .navbar li a:hover{
@@ -61,6 +62,10 @@ p {
     border-radius: 5px;
 }
 
+.slogan {
+    background-color: $bg-color-y;
+    opacity: 85%;
+}
 
 /*NOSOTROS*/   
 
@@ -254,7 +259,18 @@ body {
     }
 
     @else if $vista==mobile {
-        @media screen and (max-width:767px){
+        @media screen and (min-width:481px) and (max-width:767px){
+
+            /*INDEX*/
+            .slogan {
+                width: 100%;
+                text-align: center;
+
+                h1{
+                    font-size: 15px;
+                    padding: 5px;
+                }
+            }
 
             /*NOSOTROS*/
             .contenedor {
@@ -271,6 +287,7 @@ body {
             .contenedor-nosotros {
                 height: auto;
                 flex-direction: column;
+                margin-bottom: 20px;
             }
             
             .iconos {
@@ -314,12 +331,10 @@ body {
                 height: auto
             }
 
-
             .card-container {
             width: fit-content;
             margin: 0 auto;
             display: block;
-
 
                 .card {
                     margin: 35px;
@@ -343,7 +358,9 @@ body {
             .contactanos {
                 height: auto;
                 width: 100%;
-                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
         
             h1 {
                     font-size: 32px;
@@ -353,46 +370,17 @@ body {
             }
 
             .contenedor-contactanos {
-                margin-bottom: 5px; 
-                display: inline-block;  
-                margin-left: 20%;
-                margin-bottom: 15px;
-                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
 
                 main {
                     .formulario {
-                        @include box(240px,240px);
-                        padding-bottom: 5px;
-                        margin-bottom: 15px;
+                        width: 100%;
                     }       
-
-                    .dato {
-                        width: 95%;
-                        margin: 2px;
-                        padding: 3px;
-                    }
-
-                    h2 {
-                        font-size: 10px;
-                        padding: 5px;
-                    }
-
-                    .consulta {
-                        width: 95%;
-                        margin: 2px;
-                        padding: 3px;
-                    }
-
-                    .boton {
-                        width: 20%;
-                        margin: 5px;
-                        padding: 8px;
-                    }
-                }
             }
 
             .mapa {
-                @include box(400px,300px);
+                width: 100%;
                 overflow: hidden;
                 margin-top:20px;
             }
@@ -407,37 +395,39 @@ body {
                 justify-content: center;
             
                 .caja-1{
-                    @include box (50px,50px);
+                    @include box (100%,20px);
                     padding-top: 10px;
+                    justify-content: center;
             
                     img{
-                        @include box (100px,100px);
+                        @include box (50px,50px);
                     }
                 }
             
                 .caja-2{
-                    visibility: hidden;
+                    @include box (100%,20px);
 
                     .seguinos {
-                        visibility: hidden;
-
-                        .contacto {
-                            visibility: hidden;
-                            
-                            .copy {
-                                padding-bottom: 10px; 
-                            }
-                        }
+                        font-size: 10px;
                     }
-                    
+
+                    img{
+                        @include box (20px,20px);
+                    }
                 }
-            } 
+
+                .copy {
+                    @include box (100%,20px);
+                    font-size: 5px; 
+                    text-align: center;
+                    }
+                } 
+            }
         }
-    }
-    
+    } 
+
     @else {
         /*NOSOTROS*/
-
         .contenedor-nosotros {
             height: auto;
             flex-direction: column;
@@ -465,9 +455,7 @@ body {
 
             h2 { font-size: 15px; }
         
-            p {
-                font-size: 10px;
-            }
+            p {font-size: 10px;}
         }
         /*GALERIA*/
         .contenedor-galeria {
@@ -476,6 +464,7 @@ body {
                 padding-bottom: 50px;  
             }
         }
+
         .galeria {
             grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
             width: 90%;
@@ -512,8 +501,9 @@ body {
         .contactanos {
             height: auto;
             width: 100%;
-            display: block;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             h1 {
                 font-size: 25px;
@@ -521,44 +511,21 @@ body {
                 text-align: center;
             }
         }
+
         .contenedor-contactanos {
-            margin-bottom: 5px; 
-            display: block;  
-            margin: 20px 20%;
-
-            main {
-                .formulario {
-                    @include box(200px,200px);
-                    padding-bottom: 5px;
-                    margin-bottom: 15px;
-                }       
-
-                .dato {
-                    width: 95%;
-                    margin: 2px;
-                    padding: 3px
+            margin: auto; 
+            margin-left: auto;
+            margin-right: auto;
+            
+                main {
+                    .formulario {
+                        width:100%;
+                    }       
                 }
-
-                h2 {
-                    font-size: 12px;
-                    padding: 5px;
-                }   
-
-                .consulta {
-                    width: 95%;
-                    margin: 2px;
-                    padding: 3px;
-                }
-
-                .boton {
-                    width: 40%;
-                    margin: 1px;
-                    padding: 5px;
-                }
-            }
         }
+
         .mapa {
-            @include box (200px,200px);
+            width: 100%;
             overflow: hidden;
         }
         /*FOOTER*/
@@ -572,29 +539,27 @@ body {
             justify-content: center;
         
             .caja-1{
-                @include box (50px,50px);
+                @include box (100%,20px);
                 padding-top: 10px;
-        
-                img{
-                    @include box(100px,100px);
-                }
             }
         
             .caja-2{
-                visibility: hidden;
-        
-                .seguinos {
-                    visibility: hidden;
-        
-                    .contacto {
-                        visibility: hidden;
+                @include box (100%,20px);
+                
 
-                        .copy {
-                            padding-bottom: 10px;
-                            font-size: 15px; 
-                        }
-                    }
+                .seguinos {
+                    font-size: 10px;
                 }
+
+                img {
+                    @include box (20px,20px);
+                }
+            }
+
+            .copy {
+                @include box (100%,20px);
+                font-size: 5px;
+                text-align: center;
             }
         }
     }

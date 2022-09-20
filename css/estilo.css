@@ -48,7 +48,9 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #1b263b;
-  box-shadow: 3px 5px 5px #032033; }
+  box-shadow: 3px 5px 5px #032033;
+  margin: auto;
+  box-sizing: border-box; }
 
 .formulario .dato, .contenedor-contactanos main .dato, .formulario .contenedor-contactanos main, .contenedor-contactanos .formulario main, .contenedor-contactanos main main {
   width: 95%;
@@ -97,7 +99,8 @@ h1 {
   height: 15vh;
   align-items: center;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-style: italic; }
 
 h2 {
   font-size: 2rem;
@@ -119,13 +122,17 @@ p {
 
 .navbar-nav li {
   padding: 5px 40px 0 20px;
-  font-size: 22px; }
+  font-size: 20px; }
 
 .navbar li a:hover {
   background: #f8f9fa;
   opacity: 60%;
   color: #333;
   border-radius: 5px; }
+
+.slogan {
+  background-color: #ffb703;
+  opacity: 85%; }
 
 /*NOSOTROS*/
 .contenedor {
@@ -244,13 +251,19 @@ p {
 .caja-2 img:hover {
   transform: scale(1.1); }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
   body {
+    /*INDEX*/
     /*NOSOTROS*/
     /*GALERIA*/
     /*EXPERIENCIAS*/
-    /*CONTACTANOS*/
-    /*FOOTER*/ }
+    /*CONTACTANOS*/ }
+    body .slogan {
+      width: 100%;
+      text-align: center; }
+      body .slogan h1 {
+        font-size: 15px;
+        padding: 5px; }
     body .contenedor {
       display: flex;
       flex-direction: column;
@@ -260,7 +273,8 @@ p {
         padding-top: 15px; }
     body .contenedor-nosotros {
       height: auto;
-      flex-direction: column; }
+      flex-direction: column;
+      margin-bottom: 20px; }
     body .iconos {
       height: auto;
       width: 100%;
@@ -304,60 +318,47 @@ p {
     body .contactanos {
       height: auto;
       width: 100%;
-      display: block; }
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
       body .contactanos h1 {
         font-size: 32px;
         padding-bottom: 5px;
         text-align: center; }
     body .contenedor-contactanos {
-      margin-bottom: 5px;
-      display: inline-block;
-      margin-left: 20%;
-      margin-bottom: 15px;
-      justify-content: center; }
+      margin-left: auto;
+      margin-right: auto;
+      /*FOOTER*/ }
       body .contenedor-contactanos main .formulario, body .contenedor-contactanos main main {
-        width: 240px;
-        height: 240px;
-        padding-bottom: 5px;
-        margin-bottom: 15px; }
-      body .contenedor-contactanos main .dato, body .contenedor-contactanos main main {
-        width: 95%;
-        margin: 2px;
-        padding: 3px; }
-      body .contenedor-contactanos main h2 {
-        font-size: 10px;
-        padding: 5px; }
-      body .contenedor-contactanos main .consulta, body .contenedor-contactanos main main {
-        width: 95%;
-        margin: 2px;
-        padding: 3px; }
-      body .contenedor-contactanos main .boton, body .contenedor-contactanos main main {
-        width: 20%;
-        margin: 5px;
-        padding: 8px; }
-    body .mapa {
-      width: 400px;
-      height: 300px;
-      overflow: hidden;
-      margin-top: 20px; }
-    body .pie-de-pagina {
-      height: auto; }
-    body .contenedor-cajas {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      body .contenedor-cajas .caja-1 {
-        width: 50px;
-        height: 50px;
-        padding-top: 10px; }
-        body .contenedor-cajas .caja-1 img {
-          width: 100px;
-          height: 100px; }
-      body .contenedor-cajas .caja-2 {
-        visibility: hidden; }
-        body .contenedor-cajas .caja-2 .seguinos {
-          visibility: hidden; }
-          body .contenedor-cajas .caja-2 .seguinos .contacto {
-            visibility: hidden; }
-            body .contenedor-cajas .caja-2 .seguinos .contacto .copy {
-              padding-bottom: 10px; } }
+        width: 100%; }
+      body .contenedor-contactanos .mapa {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px; }
+      body .contenedor-contactanos .pie-de-pagina {
+        height: auto; }
+      body .contenedor-contactanos .contenedor-cajas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        body .contenedor-contactanos .contenedor-cajas .caja-1 {
+          width: 100%;
+          height: 20px;
+          padding-top: 10px;
+          justify-content: center; }
+          body .contenedor-contactanos .contenedor-cajas .caja-1 img {
+            width: 50px;
+            height: 50px; }
+        body .contenedor-contactanos .contenedor-cajas .caja-2 {
+          width: 100%;
+          height: 20px; }
+          body .contenedor-contactanos .contenedor-cajas .caja-2 .seguinos {
+            font-size: 10px; }
+          body .contenedor-contactanos .contenedor-cajas .caja-2 img {
+            width: 20px;
+            height: 20px; }
+        body .contenedor-contactanos .contenedor-cajas .copy {
+          width: 100%;
+          height: 20px;
+          font-size: 5px;
+          text-align: center; } }
