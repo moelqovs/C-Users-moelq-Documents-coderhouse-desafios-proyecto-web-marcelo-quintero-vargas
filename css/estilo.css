@@ -10,7 +10,7 @@
 .contenedor-nosotros {
   display: flex;
   height: 60vh;
-  padding-top: 20px; }
+  padding-top: 15px; }
 
 .iconos {
   text-align: center;
@@ -243,7 +243,7 @@ p {
 /*FOOTER*/
 .pie-de-pagina {
   width: 100%;
-  height: 64vh;
+  height: auto-fit;
   background-color: #1b263b; }
 
 .contenedor-cajas .caja-1 img {
@@ -271,39 +271,29 @@ p {
 .caja-2 img:hover {
   transform: scale(1.1); }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   body {
     /*INDEX*/
     /*NOSOTROS*/
     /*GALERIA*/
     /*EXPERIENCIAS*/
     /*CONTACTANOS*/ }
-    body .slogan {
-      width: 100%;
-      text-align: center; }
-      body .slogan h1 {
-        font-size: 15px;
-        padding: 5px; }
+    body .slogan h1 {
+      padding: 0 25px; }
     body .contenedor {
       display: flex;
       flex-direction: column;
       height: auto; }
-      body .contenedor h1 {
-        font-size: 32px;
-        padding-top: 15px; }
     body .contenedor-nosotros {
       height: auto;
       flex-direction: column;
-      margin-bottom: 20px; }
+      margin-bottom: 25px; }
     body .iconos {
-      height: auto;
       width: 100%;
       margin: 10px; }
       body .iconos img {
         width: 60px;
         height: 60px; }
-      body .iconos h2 {
-        font-size: 18px; }
       body .iconos p {
         font-size: 15px;
         margin: 0 25px; }
@@ -315,9 +305,10 @@ p {
       width: 90%;
       height: auto; }
       body .galeria img {
-        width: 80px;
-        height: 80px; }
+        width: 90px;
+        height: 90px; }
     body .contenedor-experiencias {
+      width: 100%;
       font-size: 32px;
       height: auto; }
     body .card-container {
@@ -328,50 +319,33 @@ p {
         margin: 35px;
         height: auto;
         padding-bottom: 5px; }
-        body .card-container .card h2 {
-          font-size: 12px;
-          padding-top: 2px; }
-        body .card-container .card p {
-          font-size: 10px;
-          overflow: hidden;
-          padding: 1px 15px; }
     body .contactanos {
       height: auto;
       width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center; }
-      body .contactanos h1 {
-        font-size: 32px;
-        padding-bottom: 5px;
-        text-align: center; }
+      box-sizing: border-box; }
     body .contenedor-contactanos {
-      display: flex;
-      flex-direction: column;
       /*FOOTER*/ }
       body .contenedor-contactanos main .formulario, body .contenedor-contactanos main main {
-        width: 100%; }
+        width: 90%;
+        box-sizing: border-box; }
       body .contenedor-contactanos .pie-de-pagina {
         height: auto; }
       body .contenedor-contactanos .contenedor-cajas .caja-1 {
         width: 100%;
-        height: 20px;
-        padding-top: 10px;
-        justify-content: center; }
-        body .contenedor-contactanos .contenedor-cajas .caja-1 img {
-          width: 50px;
-          height: 50px; }
+        height: 20px; }
       body .contenedor-contactanos .contenedor-cajas .caja-2 {
         width: 100%;
         height: 20px; }
         body .contenedor-contactanos .contenedor-cajas .caja-2 .seguinos {
           font-size: 10px; }
         body .contenedor-contactanos .contenedor-cajas .caja-2 img {
-          width: 20px;
-          height: 20px; }
+          width: 10px;
+          height: 10px; }
       body .contenedor-contactanos .contenedor-cajas .mapa {
-        width: 60%;
-        height: auto; }
+        width: 80%;
+        overflow: hidden; }
       body .contenedor-contactanos .contenedor-cajas .copy {
         width: 90%;
         height: 10px;

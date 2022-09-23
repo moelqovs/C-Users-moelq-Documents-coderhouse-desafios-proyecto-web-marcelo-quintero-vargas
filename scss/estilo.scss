@@ -231,7 +231,7 @@ p {
 /*FOOTER*/
 
 .pie-de-pagina{
-    @include box(100%,64vh);
+    @include box(100%,auto);
 
     background-color:$bg-color-navfoot;
 }
@@ -284,7 +284,7 @@ $vista:mobile;
 
 body {
     @if $vista==desktop {
-        @media screen and (min-width:768px) and (max-width:1024px) {
+        @media screen and (max-width:1024px) {
 
             body{
                 width: 100%;
@@ -296,16 +296,12 @@ body {
     }
 
     @else if $vista==mobile {
-        @media screen and (max-width:767px){
+        @media screen and (max-width:768px){
 
             /*INDEX*/
             .slogan {
-                width: 100%;
-                text-align: center;
-
                 h1{
-                    font-size: 15px;
-                    padding: 5px;
+                    padding: 0 25px;
                 }
             }
 
@@ -314,21 +310,15 @@ body {
                 display: flex;
                 flex-direction: column;
                 height: auto;
-        
-                h1 {
-                    font-size: 32px;
-                    padding-top: 15px;
-                }
             }
 
             .contenedor-nosotros {
                 height: auto;
                 flex-direction: column;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
             }
             
-            .iconos {
-                height:auto;
+            .iconos { 
                 width: 100%;
                 margin: 10px;
         
@@ -336,8 +326,6 @@ body {
                     @include box(60px,60px); 
                 }
 
-                h2 { font-size: 18px; }
-        
                 p {
                     font-size: 15px;
                     margin: 0 25px;
@@ -358,14 +346,15 @@ body {
                 height: auto;
         
                 img{
-                    @include box (80px,80px);
+                    @include box (90px,90px);
                 }
             }
 
             /*EXPERIENCIAS*/
             .contenedor-experiencias {
+                width: 100%;
                 font-size: 32px;
-                height: auto
+                height: auto;
             }
 
             .card-container {
@@ -377,17 +366,6 @@ body {
                     margin: 35px;
                     height: auto;
                     padding-bottom: 5px;
-            
-                    h2 {
-                        font-size: 12px;
-                        padding-top: 2px;
-                    }
-        
-                    p {
-                        font-size: 10px;
-                        overflow: hidden;
-                        padding: 1px 15px;
-                    }
                 }
             }
 
@@ -397,22 +375,14 @@ body {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-        
-            h1 {
-                    font-size: 32px;
-                    padding-bottom: 5px;
-                    text-align: center;
-                }
+                box-sizing: border-box;
             }
 
             .contenedor-contactanos {
-                display: flex;
-                flex-direction: column;
-
                 main {
                     .formulario {
-                        width: 100%;
+                        width: 90%;
+                        box-sizing: border-box;
                     }       
             }
 
@@ -425,12 +395,6 @@ body {
             
                 .caja-1{
                     @include box (100%,20px);
-                    padding-top: 10px;
-                    justify-content: center;
-            
-                    img{
-                        @include box (50px,50px);
-                    }
                 }
             
                 .caja-2{
@@ -439,13 +403,13 @@ body {
                     .seguinos {
                         font-size: 10px;
                     }
-
                     img{
-                        @include box (20px,20px);
+                        @include box (10px,10px);
                     }
                 }
                 .mapa {
-                    @include box (60%,auto);
+                    width: 80%;
+                    overflow: hidden;
                 }
                 .copy {
                     @include box (90%,10px);
@@ -543,6 +507,7 @@ body {
         }
 
         .contenedor-contactanos {
+            width: 100%;
             display: flex;
             flex-direction: column;
             
@@ -573,11 +538,12 @@ body {
                     font-size: 10px;
                 }
                 img {
-                    @include box (20px,20px);
+                    @include box (10px,10px);
                 }
             }
             .mapa {
-                @include box (60%,60%);
+                width: 80%;
+                overflow: hidden;
             }
             .copy {
                 @include box (90%,10px);
