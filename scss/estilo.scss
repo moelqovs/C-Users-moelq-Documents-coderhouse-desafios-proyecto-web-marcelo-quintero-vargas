@@ -302,6 +302,8 @@ body {
             .slogan {
                 h1{
                     padding: 0 25px;
+                    font-size: 15px;
+                    margin: 0 5px;
                 }
             }
 
@@ -421,6 +423,14 @@ body {
     } 
 
     @else {
+        /*INDEX*/
+        .slogan {
+            h1{
+                padding: 0 25px;
+                font-size: 15px;
+                margin: 0 5px;
+            }
+        }
         /*NOSOTROS*/
         .contenedor-nosotros {
             height: auto;

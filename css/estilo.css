@@ -243,7 +243,7 @@ p {
 /*FOOTER*/
 .pie-de-pagina {
   width: 100%;
-  height: auto-fit;
+  height: auto;
   background-color: #1b263b; }
 
 .contenedor-cajas .caja-1 img {
@@ -279,7 +279,9 @@ p {
     /*EXPERIENCIAS*/
     /*CONTACTANOS*/ }
     body .slogan h1 {
-      padding: 0 25px; }
+      padding: 0 25px;
+      font-size: 15px;
+      margin: 0 5px; }
     body .contenedor {
       display: flex;
       flex-direction: column;
