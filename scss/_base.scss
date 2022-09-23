@@ -9,7 +9,7 @@
 .contenedor-nosotros{
     display: flex;
     height: 60vh;
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .iconos {
@@ -45,7 +45,8 @@
 /*Formulario CONTACTO*/
 .formulario {
     width: 400px;
-    background-color: #adb5bd;
+    margin: auto;
+    background-color:#fb8500;
     padding: 10px;
     border-radius: 15px;
     display: flex;
@@ -54,7 +55,6 @@
     align-items: center;
     border: 1px solid #1b263b;
     box-shadow: 3px 5px 5px rgba(3, 32, 51, 8);
-    margin: auto;
     box-sizing: border-box;
 }
 
@@ -76,7 +76,6 @@
 }
 
 .formulario .boton {
-    width: 20%;
     background-color: #415a77;
     margin: 8px;
     padding: 10px;
@@ -89,9 +88,8 @@
 /*Contenedor cajas Footer*/
 
 .contenedor-cajas{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px ;
+    font-display: flex;
+    flex-direction: column;
     width: 100%;
     color: #f8f9fa;
     text-align: center;
