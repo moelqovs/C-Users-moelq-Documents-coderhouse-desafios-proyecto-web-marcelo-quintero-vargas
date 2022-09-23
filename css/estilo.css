@@ -278,10 +278,12 @@ p {
     /*GALERIA*/
     /*EXPERIENCIAS*/
     /*CONTACTANOS*/ }
-    body .slogan h1 {
-      padding: 0 25px;
-      font-size: 15px;
-      margin: 0 5px; }
+    body .slogan {
+      width: 100%; }
+      body .slogan h1 {
+        padding: 0 25px;
+        font-size: 15px;
+        margin: 0 5px; }
     body .contenedor {
       display: flex;
       flex-direction: column;

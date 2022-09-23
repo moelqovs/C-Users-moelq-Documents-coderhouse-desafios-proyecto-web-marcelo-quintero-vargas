@@ -300,7 +300,7 @@ body {
 
             /*INDEX*/
             .slogan {
-                width: 100%;
+                width:100%;
                 
                 h1{
                     padding: 0 25px;
@@ -427,6 +427,8 @@ body {
     @else {
         /*INDEX*/
         .slogan {
+            width:100%;
+
             h1{
                 padding: 0 25px;
                 font-size: 15px;
